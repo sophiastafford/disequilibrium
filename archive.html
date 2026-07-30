@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — Disequilibrium</title>
+<meta name="description" content="Browse past issues of Disequilibrium, the weekly newsletter on how AI is changing the early-career landscape.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'><path d='M18 12 V82 H88' stroke='%23d6cfbf' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><path d='M22 80 L84 24' stroke='%2317161c' stroke-width='6' stroke-linecap='round'/><path d='M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80' stroke='%233a37d6' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+  :root{
+    --paper:#f7f4ee; --paper-2:#f1ede4; --card:#fffdf9; --ink:#17161c; --ink-soft:#403e49;
+    --muted:#78757f; --line:#e4ded2; --line-strong:#d6cfbf; --accent:#3a37d6; --accent-2:#2a27b8; --accent-tint:#ecebfb;
+    --maxw:820px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .serif{font-family:'Fraunces',Georgia,serif;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(247,244,238,0.85);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:1.24rem;letter-spacing:-0.01em;}
+  .brand .mark{width:26px;height:26px;flex:0 0 26px;display:block;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;font-size:0.95rem;padding:10px 18px;border-radius:999px;border:0;cursor:pointer;transition:background .16s, transform .16s;white-space:nowrap;}
+  .btn:hover{background:var(--accent-2);transform:translateY(-1px);}
+
+  .head{padding:80px 0 40px;}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-size:0.78rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+  .kicker::before{content:"";width:26px;height:1.5px;background:var(--accent);display:inline-block;}
+  .head h1{font-weight:500;font-size:clamp(2.2rem,5vw,3.2rem);letter-spacing:-0.025em;line-height:1.05;margin:0 0 16px;}
+  .head p{font-size:1.1rem;color:var(--ink-soft);max-width:560px;margin:0;}
+  .back{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:0.9rem;font-weight:500;margin-bottom:26px;transition:color .15s;}
+  .back:hover{color:var(--accent);}
+
+  /* Issue list */
+  .issues{padding:8px 0 40px;}
+  .month{margin-bottom:38px;}
+  .month-label{font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;padding-bottom:10px;border-bottom:1px solid var(--line);}
+  .issue{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:17px 4px;border-bottom:1px solid var(--line);transition:padding-left .18s;}
+  .issue:hover{padding-left:10px;}
+  .issue .date{font-family:'Fraunces',serif;font-weight:500;font-size:1.32rem;letter-spacing:-0.01em;color:var(--ink);transition:color .15s;}
+  .issue:hover .date{color:var(--accent);}
+  .issue .meta{font-size:0.9rem;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:10px;}
+  .issue .arrow{color:var(--accent);opacity:0;transform:translateX(-4px);transition:opacity .18s, transform .18s;}
+  .issue:hover .arrow{opacity:1;transform:none;}
+
+  /* Subscribe strip */
+  .sub{margin:20px 0 70px;background:var(--ink);color:#fff;border-radius:20px;padding:44px 34px;text-align:center;position:relative;overflow:hidden;}
+  .sub::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% -30%,rgba(120,118,255,.35),transparent 62%);}
+  .sub h2{position:relative;font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-0.02em;margin:0 0 14px;}
+  .sub p{position:relative;color:#c7c6d6;margin:0 auto 24px;max-width:440px;}
+  .sub .btn{position:relative;background:#fff;color:var(--ink);}
+  .sub .btn:hover{background:#eeecff;}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;background:var(--paper-2);}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:0.9rem;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .foot .brand{font-size:1.02rem;color:var(--ink);}
+
+  @media (max-width:560px){
+    .issue .meta .label{display:none;}
+    .head{padding:56px 0 32px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M18 12 V82 H88" stroke="#d6cfbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 80 L84 24" stroke="#17161c" stroke-width="6" stroke-linecap="round"/><path d="M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80" stroke="#3a37d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Disequilibrium</a>
+    <a class="btn" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<main>
+  <section class="head">
+    <div class="wrap">
+      <a href="index.html" class="back">← Back to home</a>
+      <div class="kicker">The archive</div>
+      <h1 class="serif">Every issue, by date</h1>
+      <p>Browse past editions of Disequilibrium. Each week's issue, newest first.</p>
+    </div>
+  </section>
+
+  <section class="issues">
+    <div class="wrap">
+
+      <div class="month">
+        <a class="issue" href="issue-2026-07-28.html"><span class="date serif">July 28, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1Wit-jubCFqZReqmuIDIFiOqOWiLRoi1S/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">July 21, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1Uy8UnyMxir7vF1rLToTbJ1pbZieKXKFg/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">July 14, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1OvVw2hcJ5vRXgmmur9zYKeNsxsqsU9Ro/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">July 7, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1Z9PgLlMnmJS6h-oXlbq3tiD34k-IyfKa/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">June 30, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1WgOTbQjgHjTk05xejoqmIHFWNZPu-YuW/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">June 23, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/12psK1ilwy6kJZj0AtEETQgpJsVEoGN8B/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">June 16, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1dwoHY2MJsKSNAHBzqAsNqzbXL6DrAtsw/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">June 9, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1icdj2AUUdLaJZQWOL1X5zR8zR-A-stojlZ8FF54_Q0w/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">June 2, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1qShy9BOJlJGEGoU-MpxzI3EafwHmRK2xBPY1Y-t_zpo/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">May 26, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1b_Zhw9qWKbp2CEfyDcKpyBYIQgwqdpzE58OTcDEJTHM/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">May 19, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1rZbmLCWE2UliyUafRglBO9JlW7hDhaV3/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">May 12, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1OHi0n2Sf76jHvNJbXskkGm5vVh0JEY8s/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">May 5, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+        <a class="issue" href="https://docs.google.com/document/d/1C4W1tDNUfrsHz6PAEyGN5u17-cOcxPQ9/edit?usp=sharing" target="_blank" rel="noopener"><span class="date serif">April 28, 2026</span><span class="meta"><span class="label">Read issue</span><span class="arrow">→</span></span></a>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sub">
+        <h2 class="serif">Don't miss the next one.</h2>
+        <p>Get Disequilibrium in your inbox every week — free.</p>
+        <a class="btn" href="index.html#subscribe">Subscribe — it's free</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:10px;"><svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true" style="width:20px;height:20px;flex:0 0 20px;"><path d="M18 12 V82 H88" stroke="#d6cfbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 80 L84 24" stroke="#17161c" stroke-width="6" stroke-linecap="round"/><path d="M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80" stroke="#3a37d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Disequilibrium</a>
+    <div>© 2026 Disequilibrium · A weekly newsletter on AI &amp; the early-career landscape</div>
+  </div>
+</footer>
+
+</body>
+</html>
