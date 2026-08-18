@@ -1,0 +1,44 @@
+name: Build archive
+
+# Regenerates archive.html + feed.xml from issues.json whenever an issue is added.
+# Adding an entry to issues.json is the only step in publishing; this handles the rest.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'issues.json'
+      - 'scripts/build-archive.mjs'
+      - '.github/workflows/build-archive.yml'
+  workflow_dispatch:   # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write      # required so the job can commit the regenerated files
+
+concurrency:
+  group: build-archive
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Regenerate archive
+        run: node scripts/build-archive.mjs
+
+      - name: Commit if changed
+        run: |
+          if [[ -z "$(git status --porcelain archive.html feed.xml)" ]]; then
+            echo "Nothing to commit — archive already current."
+            exit 0
+          fi
+          git config user.name  "disequilibrium-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive.html feed.xml
+          git commit -m "Rebuild archive from issues.json [skip ci]"
+          git push
