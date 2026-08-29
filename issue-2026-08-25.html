@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The jobs coming back are the ones that check AI's work — Disequilibrium</title>
+<meta name="description" content="Three economists spent the week disagreeing about whether AI is causing anything at all. Employers are settling it in practice.">
+<link rel="canonical" href="https://sophiastafford.github.io/disequilibrium/issue-2026-08-25.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The jobs coming back are the ones that check AI's work — Disequilibrium">
+<meta property="og:description" content="Three economists spent the week disagreeing about whether AI is causing anything at all. Employers are settling it in practice.">
+<meta property="og:url" content="https://sophiastafford.github.io/disequilibrium/issue-2026-08-25.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Disequilibrium" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'><path d='M18 12 V82 H88' stroke='%23d6cfbf' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><path d='M22 80 L84 24' stroke='%2317161c' stroke-width='6' stroke-linecap='round'/><path d='M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80' stroke='%233a37d6' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+  :root{
+    --paper:#f7f4ee; --paper-2:#f1ede4; --card:#fffdf9; --ink:#17161c; --ink-soft:#403e49;
+    --muted:#78757f; --line:#e4ded2; --line-strong:#d6cfbf; --accent:#3a37d6; --accent-2:#2a27b8; --accent-tint:#ecebfb;
+    --maxw:820px; --readw:672px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .serif{font-family:'Fraunces',Georgia,serif;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(247,244,238,0.85);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:1.24rem;letter-spacing:-0.01em;}
+  .brand .mark{width:26px;height:26px;flex:0 0 26px;display:block;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;font-size:0.95rem;padding:10px 18px;border-radius:999px;border:0;cursor:pointer;transition:background .16s, transform .16s;white-space:nowrap;}
+  .btn:hover{background:var(--accent-2);transform:translateY(-1px);}
+
+  .head{padding:56px 0 8px;}
+  .head .wrap{max-width:calc(var(--readw) + 52px);}
+  .back{display:flex;width:max-content;align-items:center;gap:7px;color:var(--muted);font-size:0.9rem;font-weight:500;margin-bottom:22px;transition:color .15s;}
+  .back:hover{color:var(--accent);}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-size:0.78rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+  .kicker::before{content:"";width:26px;height:1.5px;background:var(--accent);display:inline-block;}
+  .head h1{font-weight:500;font-size:clamp(2rem,4.6vw,2.9rem);letter-spacing:-0.025em;line-height:1.08;margin:0;}
+  .head .dek{font-size:1.12rem;color:var(--ink-soft);margin:16px 0 0;max-width:56ch;}
+
+  /* ---- Issue body ---- */
+  article{max-width:calc(var(--readw) + 52px);margin:0 auto;padding:6px 26px 8px;}
+  .prose{font-size:1.075rem;line-height:1.72;color:var(--ink-soft);}
+  .prose > *:first-child{margin-top:0;}
+  .prose p{margin:0 0 1.35em;}
+  .prose strong{color:var(--ink);font-weight:600;}
+  .prose em{font-style:italic;}
+  .prose a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(58,55,214,0.32);text-underline-offset:2.5px;transition:text-decoration-color .15s;}
+  .prose a:hover{text-decoration-color:var(--accent);}
+
+  .prose h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.72rem;letter-spacing:-0.02em;line-height:1.2;color:var(--ink);
+            margin:2.4em 0 0.85em;padding-top:1.5em;border-top:1px solid var(--line);}
+  .prose h2:first-of-type{border-top:0;padding-top:0;margin-top:1.6em;}
+  .prose h3{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.3rem;letter-spacing:-0.015em;color:var(--ink);margin:2em 0 0.6em;}
+  .prose h4{font-size:1.02rem;font-weight:700;letter-spacing:0.02em;color:var(--ink);margin:1.9em 0 0.5em;}
+
+  .prose ul,.prose ol{margin:0 0 1.35em;padding-left:1.35em;}
+  .prose li{margin-bottom:0.5em;}
+  .prose li::marker{color:var(--line-strong);}
+
+  .prose blockquote{margin:1.6em 0;padding:2px 0 2px 22px;border-left:2.5px solid var(--accent);color:var(--ink);font-family:'Fraunces',Georgia,serif;font-size:1.16rem;line-height:1.55;}
+  .prose blockquote p{margin-bottom:0.6em;}
+  .prose blockquote p:last-child{margin-bottom:0;}
+
+  .prose hr{border:0;border-top:1px solid var(--line);margin:2.6em 0;}
+  .prose code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;background:var(--paper-2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;color:var(--ink);}
+
+  /* ---- Prev / next ---- */
+  .pager{max-width:calc(var(--readw) + 52px);margin:44px auto 0;padding:22px 26px 0;border-top:1px solid var(--line);
+         display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:0.92rem;font-weight:500;}
+  .pager a{color:var(--muted);transition:color .15s;}
+  .pager a:hover{color:var(--accent);}
+  .pager .spacer{flex:1;}
+
+  /* ---- Subscribe ---- */
+  .sub{margin:44px auto 70px;max-width:var(--maxw);background:var(--ink);color:#fff;border-radius:20px;padding:44px 34px;text-align:center;position:relative;overflow:hidden;}
+  .sub::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% -30%,rgba(120,118,255,.35),transparent 62%);}
+  .sub h2{position:relative;font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-0.02em;margin:0 0 14px;}
+  .sub p{position:relative;color:#c7c6d6;margin:0 auto 24px;max-width:440px;}
+  .sub .btn{position:relative;background:#fff;color:var(--ink);}
+  .sub .btn:hover{background:#eeecff;}
+  @media(max-width:860px){ .sub{margin-left:26px;margin-right:26px;} }
+
+  footer{border-top:1px solid var(--line);padding:40px 0;background:var(--paper-2);}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:0.9rem;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .foot .brand{font-size:1.02rem;color:var(--ink);}
+
+  @media (max-width:560px){
+    .head{padding:44px 0 4px;}
+    .prose{font-size:1.04rem;}
+  }
+</style>
+<!-- generated by scripts/build-archive.mjs — edit issues/*.md, not this file -->
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M18 12 V82 H88" stroke="#d6cfbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 80 L84 24" stroke="#17161c" stroke-width="6" stroke-linecap="round"/><path d="M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80" stroke="#3a37d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Disequilibrium</a>
+    <a class="btn" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<main>
+  <section class="head">
+    <div class="wrap">
+      <a href="archive.html" class="back">← Back to the archive</a>
+      <div class="kicker">August 25, 2026</div>
+      <h1 class="serif">The jobs coming back are the ones that check AI's work</h1>
+      <p class="dek">Three economists spent the week disagreeing about whether AI is causing anything at all. Employers are settling it in practice.</p>
+    </div>
+  </section>
+
+  <article>
+    <div class="prose">
+<h2 id="what-changed-this-week">What Changed This Week</h2>
+<p>Three prominent economists spent this week disagreeing in public about whether AI is causing anything at all. The entry-level jobs coming back are the ones that check AI&#39;s work.</p>
+<p>Stanford&#39;s Erik Brynjolfsson argues that large language models absorb codified knowledge, the written-down kind new graduates start out selling. Harvard&#39;s David Deming counters that junior hiring began falling roughly six months before ChatGPT shipped and blames remote work. While they argue, employers are settling it in practice. Toptal, a talent marketplace, found demand for experienced finance consultants up 31% in a single quarter, and Robert Half found that 32% of managers who cut roles after deploying AI later hired for the same or similar ones. Firms that assumed the technology could do the analysis alone are now paying people to check it.</p>
+<p>The rest of this issue covers where checking that output is becoming a job, what a federal regulator proposed to make the standard, and why the skill employers want is not the one being handed out for free. You do not control how many entry-level jobs exist. You do control whether you are the person who can tell if the answer is correct.</p>
+<h2 id="finance-consulting">Finance &amp; Consulting</h2>
+<p><strong>Demand for experienced finance consultants rose 31% in one quarter, and 32% of managers who cut roles after deploying AI later rehired for the same or similar ones.</strong> Toptal&#39;s second-quarter report ranks finance the strongest of the ten segments it tracks, up 39% year over year. Chief economist Erik Stettler attributes the jump to a correction. Firms assumed AI could handle financial analysis on its own, and are now hiring people to evaluate deployments, assess risk, and validate what the models produce. Robert Half found finance had the highest rehire rate of any sector, at 44%. For finance and economics majors, the refilled roles are judgment applied to model output, which is a job function you can train for. (<a href="https://kioncentralcoast.com/stacker-jobs/2026/08/19/ai-is-fueling-demand-for-finance-talent-not-replacing-it/" target="_blank" rel="noopener">Toptal via Stacker</a>)</p>
+<p><strong>The optimists and the skeptics are quoting the same dataset.</strong> Sander van &#39;t Noordende, chief executive of the recruiting firm Randstad, argued in Forbes that consensus is shifting from displacement toward expansion, citing a Ramp and Revelio study finding that the organizations investing most heavily in AI grew headcount by over 10% and entry-level hiring by 12%. Anders Humlum, the University of Chicago economist, cited that same study to NPR to make the same point. Randstad&#39;s own data shows demand for emotional intelligence up 173% and for creativity up 168%. If you are choosing between two similar employers this fall, the one visibly spending on AI is the one more likely to be growing its junior ranks. (<a href="https://www.forbes.com/sites/sandervantnoordende/2026/08/24/from-wipeout-to-workforce-expansion-the-converging-consensus-on-ai/" target="_blank" rel="noopener">Forbes</a> | <a href="https://www.npr.org/2026/08/18/nx-s1-5910677/recent-college-graduates-employment-job-artificial-intelligence" target="_blank" rel="noopener">NPR</a>)</p>
+<p><strong>Roughly 76% of Santander UK&#39;s graduate intake entered AI and data programs this year, up from 45%.</strong> Bloomberg reported that AI now shapes bank internships as much as the hours do, with interns building agents and running demonstrations for senior bankers. That reverses the direction of the apprenticeship. Juniors used to absorb judgment from above by grinding through analyst work, and are now valued for showing senior staff what the tool does. For students recruiting into banking, the demo is doing work the pitch book used to do. (<a href="https://www.bloomberg.com/news/articles/2026-08-18/ai-is-starting-to-define-bank-internships-as-much-as-long-hours" target="_blank" rel="noopener">Bloomberg</a>)</p>
+<h2 id="healthcare">Healthcare</h2>
+<p><strong>The Food and Drug Administration proposed evaluating generative AI medical devices the way it evaluates physicians.</strong> The agency&#39;s August 18 discussion paper describes a competency assessment explicitly modeled on how doctors are trained, running from non-clinical benchmarking through clinical confirmation under real-world conditions to ongoing postmarket monitoring. Devices would be scored on two axes, how independently a function acts and how severe the consequence of a wrong output. A federal regulator has written the supervised-judgment pipeline medical students train inside into a proposed standard for machines. For pre-med and health-policy students, comments are open under docket FDA-2026-N-7874 until October 19, and a comment on the public record is something you can file this semester. (<a href="https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices" target="_blank" rel="noopener">FDA</a> | <a href="https://www.healio.com/news/optometry/20260821/fda-asks-for-feedback-on-ai-medical-device-regulation" target="_blank" rel="noopener">Healio</a>)</p>
+<h2 id="tech">Tech</h2>
+<p><strong>Apple cut roughly 200 roles across Siri, Vision Pro, and its AI integration teams without reducing its bet on AI.</strong> About 100 positions went from the Vision Pro organization and about 100 from Siri and related software teams. Reporting indicates that the Siri cuts targeted staff who worked on the older architecture, because the new large-language-model Siri shipping with iOS 27 requires different expertise. Apple rarely announces layoffs, which makes the composition of these cuts unusually legible. For computer science majors, this suggests the risk is not that your job disappears but that the stack you specialized in stops being the one your employer needs. (<a href="https://www.bloomberg.com/news/articles/2026-08-21/apple-cuts-jobs-in-siri-vision-pro-immersive-video-and-gaming-teams" target="_blank" rel="noopener">Bloomberg</a> | <a href="https://techcrunch.com/2026/08/21/apple-is-reportedly-cutting-hundreds-of-jobs-from-siri-vision-pro-teams/" target="_blank" rel="noopener">TechCrunch</a>)</p>
+<p><strong>Anthropic launched a free AI course platform the same week employers rated AI skills the weakest thing graduates bring.</strong> Claude Academy opened on August 20 with courses accessible without an account, and completion badges for signed-in users that post to LinkedIn, built around a framework of delegating work to a model and then verifying it. Inside Higher Ed reported data from the National Association of Colleges and Employers showing that as of March, 35% of entry-level jobs required AI skills, up from 13% six months earlier. Those same employers rank AI skills below teamwork, communication, critical thinking, and leadership among what graduates arrive with. The badge is cheap signal worth having in an afternoon. The gap employers describe is knowing when not to use the tool, and no free course currently certifies that. (<a href="https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai" target="_blank" rel="noopener">Anthropic</a> | <a href="https://www.insidehighered.com/news/faculty/teaching/2026/08/20/ai-requirements-and-courses-colleges-eye-ai-fluency" target="_blank" rel="noopener">Inside Higher Ed</a>)</p>
+    </div>
+    <nav class="pager">
+      <a href="issue.html?doc=1qtimJAUQ0So45KuOlEG1lbtRE2K23ezdCk63pRp5nck&amp;date=August%2018%2C%202026">← August 18, 2026</a>
+      <span class="spacer"></span>
+    </nav>
+  </article>
+
+  <section>
+    <div class="sub">
+      <h2 class="serif">Don't miss the next one.</h2>
+      <p>Get Disequilibrium in your inbox every week — free.</p>
+      <a class="btn" href="index.html#subscribe">Subscribe — it's free</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:10px;"><svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true" style="width:20px;height:20px;flex:0 0 20px;"><path d="M18 12 V82 H88" stroke="#d6cfbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 80 L84 24" stroke="#17161c" stroke-width="6" stroke-linecap="round"/><path d="M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80" stroke="#3a37d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Disequilibrium</a>
+    <div>© 2026 Disequilibrium · A weekly newsletter on AI &amp; the early-career landscape</div>
+  </div>
+</footer>
+
+</body>
+</html>
