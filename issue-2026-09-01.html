@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finished work no longer proves you can do it — Disequilibrium</title>
+<meta name="description" content="A Wall Street bank, six health system CEOs and an MIT committee named the same problem in one week. Evaluation is moving to live, unassisted demonstration.">
+<link rel="canonical" href="https://sophiastafford.github.io/disequilibrium/issue-2026-09-01.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Finished work no longer proves you can do it — Disequilibrium">
+<meta property="og:description" content="A Wall Street bank, six health system CEOs and an MIT committee named the same problem in one week. Evaluation is moving to live, unassisted demonstration.">
+<meta property="og:url" content="https://sophiastafford.github.io/disequilibrium/issue-2026-09-01.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Disequilibrium" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'><path d='M18 12 V82 H88' stroke='%23d6cfbf' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><path d='M22 80 L84 24' stroke='%2317161c' stroke-width='6' stroke-linecap='round'/><path d='M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80' stroke='%233a37d6' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+  :root{
+    --paper:#f7f4ee; --paper-2:#f1ede4; --card:#fffdf9; --ink:#17161c; --ink-soft:#403e49;
+    --muted:#78757f; --line:#e4ded2; --line-strong:#d6cfbf; --accent:#3a37d6; --accent-2:#2a27b8; --accent-tint:#ecebfb;
+    --maxw:820px; --readw:672px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .serif{font-family:'Fraunces',Georgia,serif;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(247,244,238,0.85);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:1.24rem;letter-spacing:-0.01em;}
+  .brand .mark{width:26px;height:26px;flex:0 0 26px;display:block;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;font-size:0.95rem;padding:10px 18px;border-radius:999px;border:0;cursor:pointer;transition:background .16s, transform .16s;white-space:nowrap;}
+  .btn:hover{background:var(--accent-2);transform:translateY(-1px);}
+
+  .head{padding:56px 0 8px;}
+  .head .wrap{max-width:calc(var(--readw) + 52px);}
+  .back{display:flex;width:max-content;align-items:center;gap:7px;color:var(--muted);font-size:0.9rem;font-weight:500;margin-bottom:22px;transition:color .15s;}
+  .back:hover{color:var(--accent);}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-size:0.78rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+  .kicker::before{content:"";width:26px;height:1.5px;background:var(--accent);display:inline-block;}
+  .head h1{font-weight:500;font-size:clamp(2rem,4.6vw,2.9rem);letter-spacing:-0.025em;line-height:1.08;margin:0;}
+  .head .dek{font-size:1.12rem;color:var(--ink-soft);margin:16px 0 0;max-width:56ch;}
+
+  /* ---- Issue body ---- */
+  article{max-width:calc(var(--readw) + 52px);margin:0 auto;padding:6px 26px 8px;}
+  .prose{font-size:1.075rem;line-height:1.72;color:var(--ink-soft);}
+  .prose > *:first-child{margin-top:0;}
+  .prose p{margin:0 0 1.35em;}
+  .prose strong{color:var(--ink);font-weight:600;}
+  .prose em{font-style:italic;}
+  .prose a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(58,55,214,0.32);text-underline-offset:2.5px;transition:text-decoration-color .15s;}
+  .prose a:hover{text-decoration-color:var(--accent);}
+
+  .prose h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.72rem;letter-spacing:-0.02em;line-height:1.2;color:var(--ink);
+            margin:2.4em 0 0.85em;padding-top:1.5em;border-top:1px solid var(--line);}
+  .prose h2:first-of-type{border-top:0;padding-top:0;margin-top:1.6em;}
+  .prose h3{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.3rem;letter-spacing:-0.015em;color:var(--ink);margin:2em 0 0.6em;}
+  .prose h4{font-size:1.02rem;font-weight:700;letter-spacing:0.02em;color:var(--ink);margin:1.9em 0 0.5em;}
+
+  .prose ul,.prose ol{margin:0 0 1.35em;padding-left:1.35em;}
+  .prose li{margin-bottom:0.5em;}
+  .prose li::marker{color:var(--line-strong);}
+
+  .prose blockquote{margin:1.6em 0;padding:2px 0 2px 22px;border-left:2.5px solid var(--accent);color:var(--ink);font-family:'Fraunces',Georgia,serif;font-size:1.16rem;line-height:1.55;}
+  .prose blockquote p{margin-bottom:0.6em;}
+  .prose blockquote p:last-child{margin-bottom:0;}
+
+  .prose hr{border:0;border-top:1px solid var(--line);margin:2.6em 0;}
+  .prose code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;background:var(--paper-2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;color:var(--ink);}
+
+  /* ---- Prev / next ---- */
+  .pager{max-width:calc(var(--readw) + 52px);margin:44px auto 0;padding:22px 26px 0;border-top:1px solid var(--line);
+         display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:0.92rem;font-weight:500;}
+  .pager a{color:var(--muted);transition:color .15s;}
+  .pager a:hover{color:var(--accent);}
+  .pager .spacer{flex:1;}
+
+  /* ---- Subscribe ---- */
+  .sub{margin:44px auto 70px;max-width:var(--maxw);background:var(--ink);color:#fff;border-radius:20px;padding:44px 34px;text-align:center;position:relative;overflow:hidden;}
+  .sub::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% -30%,rgba(120,118,255,.35),transparent 62%);}
+  .sub h2{position:relative;font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-0.02em;margin:0 0 14px;}
+  .sub p{position:relative;color:#c7c6d6;margin:0 auto 24px;max-width:440px;}
+  .sub .btn{position:relative;background:#fff;color:var(--ink);}
+  .sub .btn:hover{background:#eeecff;}
+  @media(max-width:860px){ .sub{margin-left:26px;margin-right:26px;} }
+
+  footer{border-top:1px solid var(--line);padding:40px 0;background:var(--paper-2);}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:0.9rem;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .foot .brand{font-size:1.02rem;color:var(--ink);}
+
+  @media (max-width:560px){
+    .head{padding:44px 0 4px;}
+    .prose{font-size:1.04rem;}
+  }
+</style>
+<!-- generated by scripts/build-archive.mjs — edit issues/*.md, not this file -->
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M18 12 V82 H88" stroke="#d6cfbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 80 L84 24" stroke="#17161c" stroke-width="6" stroke-linecap="round"/><path d="M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80" stroke="#3a37d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Disequilibrium</a>
+    <a class="btn" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<main>
+  <section class="head">
+    <div class="wrap">
+      <a href="archive.html" class="back">← Back to the archive</a>
+      <div class="kicker">September 1, 2026</div>
+      <h1 class="serif">Finished work no longer proves you can do it</h1>
+      <p class="dek">A Wall Street bank, six health system CEOs and an MIT committee named the same problem in one week. Evaluation is moving to live, unassisted demonstration.</p>
+    </div>
+  </section>
+
+  <article>
+    <div class="prose">
+<h2 id="what-changed-this-week">What Changed This Week</h2>
+<p>Bill Gates published a 6,000-word essay Wednesday arguing that the jobs at most risk are entry- and mid-level, and that the work replacing them requires “skills that take many years to learn.” He did not name the mechanism. Three other institutions did. Finished work no longer proves you can do it, so the test is moving to whether you can explain it live.</p>
+<p>Goldman Sachs gave the clearest version. Junior traders learned judgment by pricing client requests under supervision, work the firm can now automate. That removes the task that trained the junior and the one that proved the junior was any good. Employment for 22-to-25-year-olds in the most AI-exposed occupations runs 19% below its less-exposed peers’ trend, according to Stanford’s Digital Economy Lab, driven by reduced hiring.</p>
+<p>The aggregate market is steadier than that sounds. On August 28, the Bureau of Labor Statistics preliminarily revised payroll growth down by 79,000 through March, a 0.1% markdown against a 0.2% decade average. What is changing is which jobs exist, not how many. The rest of this issue is about which finished products stopped counting as proof.</p>
+<h2 id="finance-consulting">Finance &amp; Consulting</h2>
+<p><strong>Chris Churchman, the Goldman Sachs partner running its AI build, warned that automating junior work risks “cognitive atrophy” among bankers.</strong> He asked whether automating the apprenticeship still produces senior traders who understand their work. OpenAI published matching evidence two days later. Among more than 1,000 Bocconi University undergraduates, those given ChatGPT scored almost a full point higher on a five-point rubric, but only critical-thinking training produced a wider range of ideas. For finance majors, ask what an analyst class still does by hand, because that shrinking list is the training. (<a href="https://www.thestreet.com/investing/stocks/gs-goldman-sachs-partner-and-head-of-marquee-chris-churchman-warns-ai-could-erode-bankers-reasoning-skills" target="_blank" rel="noopener">TheStreet</a> | <a href="https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/" target="_blank" rel="noopener">OpenAI</a>)</p>
+<p><strong>Bayer is running 30 AI agents on its systems overhaul with the stated goal of needing “significantly fewer consultants.”</strong> Jochen Kamp, who leads it, said “fewer and fewer” traditional consultants will be needed. Source Global, a research firm, found 55% of clients plan to use the Big Four accounting firms more over the next 12 months, down from 80% a year earlier. The exposed work is implementation, where analysts sit. If you are recruiting at a Big Four firm or Accenture, ask what share of the practice’s revenue comes from advice. (<a href="https://www.irishtimes.com/business/2026/08/31/consultants-head-for-a-showdown-with-their-own-clients/" target="_blank" rel="noopener">The Irish Times</a>)</p>
+<p><strong>An MIT committee reported that employers already weight interview problem-solving over grades, the same week a study found that AI cannot grade written work reliably.</strong> The report notes employers care less about grades than about “performance on internal assessments, such as the ability to answer difficult interview questions.” Researchers who ran 50 bioscience essays through ChatGPT found gaps against human markers as large as 40 points on a 100-point scale, inflating weak essays and marking down strong ones. For anyone recruiting this fall, practice explaining your reasoning out loud on AI-assisted work. (<a href="https://www.insidehighered.com/news/tech-innovation/artificial-intelligence/2026/08/28/mit-ai-report-calls-alternative-grading" target="_blank" rel="noopener">Inside Higher Ed</a> | <a href="https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2710688" target="_blank" rel="noopener">Assessment &amp; Evaluation in Higher Education</a>)</p>
+<h2 id="law">Law</h2>
+<p><strong>Google Cloud launched Gemini Enterprise for Legal on August 25 with Weil, Cleary and Freshfields among its first firms.</strong> It executes complete workflows rather than assisting with tasks, and the four it names are contract review, due diligence, regulatory monitoring and privacy requests. That list is the standard first-year associate rotation. Weil’s co-managing partner said clients now expect firms to use AI and pass on the efficiencies. For 1Ls heading into interviews, ask what junior work looks like once these agents run. (<a href="https://www.googlecloudpresscorner.com/2026-08-25-Google-Cloud-Launches-Gemini-Enterprise-for-Legal" target="_blank" rel="noopener">Google Cloud</a> | <a href="https://www.artificiallawyer.com/2026/08/25/google-launches-gemini-enterprise-for-legal/" target="_blank" rel="noopener">Artificial Lawyer</a>)</p>
+<p><strong>The chief executive of Harvey, a legal AI company, said the question is no longer the product roadmap but “what it will do to the profession.”</strong> Winston Weinberg spoke at ILTACON, where a veteran executive quoted by the legal journalist Bob Ambrogi said the industry has hit “peak legal tech.” Practitioners want something narrower. In a survey of 400 US legal professionals by the software company 8am, 42% most want AI aimed at time tracking, and 39% lose four or more billable hours a week to admin. For law students, legal-operations fluency is an opening almost nobody claims. (<a href="https://www.artificiallawyer.com/2026/08/27/iltacon-2026-day-three-briefing/" target="_blank" rel="noopener">Artificial Lawyer</a> | <a href="https://www.abajournal.com/news/article/legal-professionals-feel-miserable-over-admin-tasks-new-report-shows" target="_blank" rel="noopener">ABA Journal</a>)</p>
+<h2 id="healthcare">Healthcare</h2>
+<p><strong>Executives at six health systems named AI adoption without reskilling the most dangerous trend in healthcare.</strong> Leaders from Baystate Health, Cincinnati Children’s, Banner Health and Duke Health told Becker’s Hospital Review adoption is outrunning investment in people. Cincinnati Children’s chief executive Steve Davis warned that moving staff into AI-enabled workflows without “deliberate development of the critical thinking and analytical skills” risks weakening what the tools are meant to augment. That is the Goldman warning in another industry. For pre-health students, take a first clinical job only if it still makes you do the reasoning. (<a href="https://www.beckershospitalreview.com/healthcare-information-technology/ai/what-health-system-ceos-fear-most-about-ai/" target="_blank" rel="noopener">Becker&#39;s Hospital Review</a>)</p>
+<p><strong>On August 27, National Nurses United held its largest coordinated action against Palantir, with protests in eight cities.</strong> The 225,000-member union objects to HCA Healthcare’s Timpani platform, built on Palantir technology, which nurses say moves staffing decisions to a Nashville office and displaces nurse managers’ judgment about unit staffing. HCA says nurse leaders review and edit the generated schedules. The complaint is not that jobs disappear but that judgment relocates. For nursing students, ask who sets the unit schedule and staffing ratio. (<a href="https://www.healthcareitnews.com/news/nurses-nationwide-protest-palantir-technology-hospitals" target="_blank" rel="noopener">Healthcare IT News</a> | <a href="https://www.nationalnursesunited.org/press/nnu-nurses-to-participate-in-nationwide-protests-against-palantir" target="_blank" rel="noopener">National Nurses United</a>)</p>
+<p><strong>Northwell Health is building a clinical informatics rotation into residency as its northern region finishes an ambient AI rollout that took 18 months.</strong> Albert Villarin, its chief medical informatics officer, said the rollout reaches nurses by year-end, against roughly 18 years for the shift from paper to electronic records. He argues AI has to be taught like a stethoscope rather than “discovered in practice.” Northwell is the only institution here replacing the training it automates. For pre-meds, ask whether target residency programs run an informatics rotation. (<a href="https://www.beckershospitalreview.com/healthcare-information-technology/ai/what-comes-after-ambient-ai-in-healthcare/" target="_blank" rel="noopener">Becker&#39;s Hospital Review</a>)</p>
+    </div>
+    <nav class="pager">
+      <a href="issue-2026-08-25.html">← August 25, 2026</a>
+      <span class="spacer"></span>
+    </nav>
+  </article>
+
+  <section>
+    <div class="sub">
+      <h2 class="serif">Don't miss the next one.</h2>
+      <p>Get Disequilibrium in your inbox every week — free.</p>
+      <a class="btn" href="index.html#subscribe">Subscribe — it's free</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:10px;"><svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true" style="width:20px;height:20px;flex:0 0 20px;"><path d="M18 12 V82 H88" stroke="#d6cfbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 80 L84 24" stroke="#17161c" stroke-width="6" stroke-linecap="round"/><path d="M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80" stroke="#3a37d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Disequilibrium</a>
+    <div>© 2026 Disequilibrium · A weekly newsletter on AI &amp; the early-career landscape</div>
+  </div>
+</footer>
+
+</body>
+</html>
