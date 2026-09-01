@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{title}} — Disequilibrium</title>
+<title>{{dateLabel}} — Disequilibrium</title>
 <meta name="description" content="{{description}}">
 <link rel="canonical" href="{{canonical}}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="{{title}} — Disequilibrium">
+<meta property="og:title" content="{{ogTitle}}">
 <meta property="og:description" content="{{description}}">
 <meta property="og:url" content="{{canonical}}">
 <meta name="twitter:card" content="summary_large_image">
@@ -36,14 +36,16 @@
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;font-size:0.95rem;padding:10px 18px;border-radius:999px;border:0;cursor:pointer;transition:background .16s, transform .16s;white-space:nowrap;}
   .btn:hover{background:var(--accent-2);transform:translateY(-1px);}
 
-  .head{padding:56px 0 8px;}
+  .head{padding:56px 0 0;}
   .head .wrap{max-width:calc(var(--readw) + 52px);}
-  .back{display:flex;width:max-content;align-items:center;gap:7px;color:var(--muted);font-size:0.9rem;font-weight:500;margin-bottom:22px;transition:color .15s;}
+  .back{display:flex;width:max-content;align-items:center;gap:7px;color:var(--muted);font-size:0.9rem;font-weight:500;margin-bottom:26px;transition:color .15s;}
   .back:hover{color:var(--accent);}
-  .kicker{display:inline-flex;align-items:center;gap:10px;font-size:0.78rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
-  .kicker::before{content:"";width:26px;height:1.5px;background:var(--accent);display:inline-block;}
-  .head h1{font-weight:500;font-size:clamp(2rem,4.6vw,2.9rem);letter-spacing:-0.025em;line-height:1.08;margin:0;}
-  .head .dek{font-size:1.12rem;color:var(--ink-soft);margin:16px 0 0;max-width:56ch;}
+
+  /* Masthead, matching the Doc issues: title, then the dated subtitle line,
+     then a rule — the same divider that sits above every section below. */
+  .masthead{font-weight:600;font-size:clamp(2rem,5vw,2.75rem);letter-spacing:-0.03em;line-height:1.05;margin:0;}
+  .subtitle{font-weight:600;font-size:1.02rem;color:var(--ink-soft);margin:14px 0 0;}
+  .head .rule{border:0;border-top:1px solid var(--line-strong);margin:22px 0 0;}
 
   /* ---- Issue body ---- */
   article{max-width:calc(var(--readw) + 52px);margin:0 auto;padding:6px 26px 8px;}
@@ -111,9 +113,9 @@
   <section class="head">
     <div class="wrap">
       <a href="archive.html" class="back">← Back to the archive</a>
-      <div class="kicker">{{kicker}}</div>
-      <h1 class="serif">{{title}}</h1>
-      {{dek}}
+      <h1 class="serif masthead">Disequilibrium</h1>
+      <p class="subtitle">Keeping up with AI &amp; the Entry-Level Job Market | {{dateLabel}}</p>
+      <hr class="rule">
     </div>
   </section>
 

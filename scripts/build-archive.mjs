@@ -99,7 +99,7 @@ if (existsSync(issuesDir)) {
     issues.push({
       kind: 'md', date, dt, source: where,
       title: data.title ? String(data.title) : pretty(dt),
-      kicker: data.title ? pretty(dt) : 'Weekly issue',
+      hasTitle: Boolean(data.title),
       dek: data.dek ? String(data.dek) : '',
       body,
       page: `issue-${date}.html`,
@@ -177,12 +177,15 @@ issues.forEach((it, idx) => {
 
   // Replacement values go through a function so that a "$" in an issue — a dollar
   // figure, say — is never read as a regex substitution pattern like $& or $'.
+  // The page itself shows the masthead and the dated subtitle line, matching the
+  // Doc-era issues. `title` and `dek` from the front matter are metadata only:
+  // they drive the share preview and the feed, and appear nowhere on the page.
   const fill = {
     title: attr(it.title),
-    kicker: attr(it.kicker),
+    dateLabel: attr(pretty(it.dt)),
+    ogTitle: attr(it.hasTitle ? `${it.title} — Disequilibrium` : `Disequilibrium — ${pretty(it.dt)}`),
     description: attr(description),
     canonical: attr(`${SITE}/${it.page}`),
-    dek: it.dek ? `<p class="dek">${xml(it.dek)}</p>` : '',
     pager,
     content: markdownToHtml(it.body),
   };
