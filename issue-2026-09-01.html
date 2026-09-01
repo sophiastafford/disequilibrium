@@ -160,5 +160,36 @@
   </div>
 </footer>
 
+<script>
+  /* Copying an issue into an email dragged the page's beige background along with
+     it, because the browser serializes the surrounding computed styles into the
+     clipboard. Here we put the selection on the clipboard ourselves as plain
+     semantic HTML — <strong>, <em>, <a>, <h2> all survive, no colours, no
+     background — so it arrives styled by the mail client instead. */
+  document.addEventListener('copy', function (e) {
+    var sel = document.getSelection();
+    if (!sel || sel.isCollapsed || !e.clipboardData) return;
+
+    var holder = document.createElement('div');
+    for (var i = 0; i < sel.rangeCount; i++) {
+      holder.appendChild(sel.getRangeAt(i).cloneContents());
+    }
+
+    holder.querySelectorAll('*').forEach(function (el) {
+      el.removeAttribute('style');
+      el.removeAttribute('class');
+      el.removeAttribute('id');
+    });
+
+    try {
+      e.clipboardData.setData('text/html', holder.innerHTML);
+      e.clipboardData.setData('text/plain', sel.toString());
+      e.preventDefault();
+    } catch (err) {
+      /* Any failure just falls through to the browser's own copy. */
+    }
+  });
+</script>
+
 </body>
 </html>
