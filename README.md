@@ -1,13 +1,13 @@
 # disequilibrium
 
-The website for **Disequilibrium**, a weekly newsletter on how AI is changing the
-entry-level job market. Static HTML on GitHub Pages, no framework, no dependencies.
+The site for Disequilibrium, a weekly newsletter about AI and the entry-level job
+market. Static HTML on GitHub Pages. No framework, no dependencies.
 
-Live at <https://sophiastafford.github.io/disequilibrium/>
+https://sophiastafford.github.io/disequilibrium/
 
 ## Publishing an issue
 
-Add one file — `issues/YYYY-MM-DD.md` — and push:
+Add a file called `issues/YYYY-MM-DD.md` and push it.
 
 ```markdown
 ---
@@ -25,71 +25,64 @@ Opening section...
 ([Bloomberg](https://example.com) | [NPR](https://example.com))
 ```
 
-That's the whole publishing step. On push, the `Build archive` Action runs
-`scripts/build-archive.mjs`, which:
+Pushing kicks off the Build archive action, which renders
+`issue-YYYY-MM-DD.html`, updates the list on the archive page, and rewrites
+`feed.xml`. The page is usually live inside a minute.
 
-- renders `issue-YYYY-MM-DD.html` from `templates/issue.template.html`
-- rebuilds the issue list in `archive.html`
-- regenerates `feed.xml`, including the full text of each issue
+`title` and `dek` are both optional and neither shows up on the page, which uses
+the Disequilibrium masthead and the issue date instead. They set the browser tab,
+the preview card when someone shares the link, and the item title in the feed.
 
-The page is live roughly thirty seconds later.
+## Editing an issue that's already up
 
-`title` and `dek` are both optional. Without a title, the issue is headed by its
-date, the way every issue before the markdown switch read.
+Open `issues/YYYY-MM-DD.md` on GitHub, click the pencil, change it, commit. The
+page rebuilds itself.
 
-## Editing an issue after it's published
+## Taking an issue down
 
-Open `issues/YYYY-MM-DD.md` in GitHub's web editor (press `.` in the repo, or click
-the pencil), make the change, and commit. The page rebuilds itself.
+Put `draft: true` in its front matter and push. The page, the archive row and the
+feed item all disappear. Delete the line to bring it back.
 
-## Unpublishing
+## Which files to edit
 
-Add `draft: true` to that issue's front matter and push. The page, the archive row
-and the feed item all disappear. Delete the line to put it back.
+Edit `issues/*.md`, `templates/issue.template.html`, `index.html`, and any part of
+`archive.html` outside the `ARCHIVE:START` / `ARCHIVE:END` markers.
 
-## What's generated and what isn't
+Leave `issue-YYYY-MM-DD.html`, `feed.xml` and everything between those markers
+alone. They get rewritten on every push.
 
-**Edit these:**
+## Weekly run
 
-| File | What it is |
-| --- | --- |
-| `issues/*.md` | The issues themselves. The only thing you add each week. |
-| `templates/issue.template.html` | The shell every issue page is poured into. |
-| `index.html` | Home page. |
-| `archive.html` | Archive page *outside* the `ARCHIVE:START/END` markers. |
+A scheduled task fires Monday at 7pm Eastern. It researches the past week, drafts
+the issue, and commits it here dated Tuesday. It only works if the laptop holding
+the AI Newsletter folder is awake, since the whole pipeline reads and writes there.
+A second task checks the site on Tuesday morning and says something if the issue
+never arrived.
 
-**Don't hand-edit these — they're rebuilt on every push:**
+## Older issues
 
-`issue-YYYY-MM-DD.html` · `feed.xml` · the block between the `ARCHIVE:START` and
-`ARCHIVE:END` markers in `archive.html`
+Everything before 25 August 2026 lives in a Google Doc. Those are listed in
+`issues.json` as `{"date", "docId"}` pairs and render through `issue.html`, which
+embeds the Doc in an iframe. Old links still work. Don't add new entries there.
 
-## Legacy Google Doc issues
+They do depend on each Doc staying shared publicly. If one gets unshared it turns
+into a sign-in wall and nothing warns you, so they're worth converting to markdown
+eventually.
 
-Issues before 25 August 2026 live in Google Docs and are listed in `issues.json` as
-`{ "date", "docId" }` entries. They render through `issue.html`, which iframes the
-Doc's preview, and their links still work. Don't add new entries there — write a
-markdown file instead.
-
-Those issues depend on their Docs staying link-shared publicly. If one is ever
-un-shared it becomes a sign-in wall with no warning, so they're worth back-filling
-into markdown eventually.
-
-## Local development
+## Running it locally
 
 ```bash
 node scripts/build-archive.mjs   # rebuild everything
 node scripts/test.mjs            # check the markdown renderer
 ```
 
-Node 20+. No `npm install` — there are no dependencies. `scripts/markdown.mjs` is a
-small in-repo Markdown renderer covering what an issue actually uses. If an issue
-ever needs tables, images or footnotes, that's the moment to swap it for `marked`.
+Node 20 or later. There's no `npm install` because there's nothing to install.
+`scripts/markdown.mjs` is a small markdown renderer covering what the issues
+actually use. Swap it for `marked` if an issue ever needs tables or images.
 
-The build fails loudly and refuses to write anything if an issue file is misnamed,
-dated impossibly, empty, or collides with an existing date.
+The build stops and changes nothing if an issue file has a bad name, an impossible
+date, no content, or a date some other issue already has.
 
 ## Subscribers
 
-The form on the home page posts to a Google Form. Nothing currently emails the list —
-`feed.xml` carries each issue's full text so an RSS-to-email service (Buttondown, Kit,
-Mailchimp) can be pointed at it when that's wanted.
+The form on the home page posts to a Google Form.
