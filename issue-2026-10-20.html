@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>October 20, 2026 — Disequilibrium</title>
+<meta name="description" content="Anthropic says the junior share of its technical hires fell from 27% to 9%, and the Fed hears the same story from employers in five districts. The new work AI creates is mostly arriving as contracts.">
+<link rel="canonical" href="https://sophiastafford.github.io/disequilibrium/issue-2026-10-20.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI is showing up in the hiring data as jobs that never get posted — Disequilibrium">
+<meta property="og:description" content="Anthropic says the junior share of its technical hires fell from 27% to 9%, and the Fed hears the same story from employers in five districts. The new work AI creates is mostly arriving as contracts.">
+<meta property="og:url" content="https://sophiastafford.github.io/disequilibrium/issue-2026-10-20.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Disequilibrium" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'><path d='M18 12 V82 H88' stroke='%23d6cfbf' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><path d='M22 80 L84 24' stroke='%2317161c' stroke-width='6' stroke-linecap='round'/><path d='M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80' stroke='%233a37d6' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+  :root{
+    --paper:#f7f4ee; --paper-2:#f1ede4; --card:#fffdf9; --ink:#17161c; --ink-soft:#403e49;
+    --muted:#78757f; --line:#e4ded2; --line-strong:#d6cfbf; --accent:#3a37d6; --accent-2:#2a27b8; --accent-tint:#ecebfb;
+    --maxw:820px; --readw:672px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .serif{font-family:'Fraunces',Georgia,serif;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(247,244,238,0.85);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:1.24rem;letter-spacing:-0.01em;}
+  .brand .mark{width:26px;height:26px;flex:0 0 26px;display:block;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;font-size:0.95rem;padding:10px 18px;border-radius:999px;border:0;cursor:pointer;transition:background .16s, transform .16s;white-space:nowrap;}
+  .btn:hover{background:var(--accent-2);transform:translateY(-1px);}
+
+  .head{padding:56px 0 0;}
+  .head .wrap{max-width:calc(var(--readw) + 52px);}
+  .back{display:flex;width:max-content;align-items:center;gap:7px;color:var(--muted);font-size:0.9rem;font-weight:500;margin-bottom:26px;transition:color .15s;}
+  .back:hover{color:var(--accent);}
+
+  /* Masthead, matching the Doc issues: title, then the dated subtitle line,
+     then a rule — the same divider that sits above every section below. */
+  .masthead{font-weight:600;font-size:clamp(2rem,5vw,2.75rem);letter-spacing:-0.03em;line-height:1.05;margin:0;}
+  .subtitle{font-weight:600;font-size:1.02rem;color:var(--ink-soft);margin:14px 0 0;}
+  .head .rule{border:0;border-top:1px solid var(--line-strong);margin:22px 0 0;}
+
+  /* ---- Issue body ---- */
+  article{max-width:calc(var(--readw) + 52px);margin:0 auto;padding:6px 26px 8px;}
+  .prose{font-size:1.075rem;line-height:1.72;color:var(--ink-soft);}
+  .prose > *:first-child{margin-top:0;}
+  .prose p{margin:0 0 1.35em;}
+  .prose strong{color:var(--ink);font-weight:600;}
+  .prose em{font-style:italic;}
+  .prose a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(58,55,214,0.32);text-underline-offset:2.5px;transition:text-decoration-color .15s;}
+  .prose a:hover{text-decoration-color:var(--accent);}
+
+  .prose h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.72rem;letter-spacing:-0.02em;line-height:1.2;color:var(--ink);
+            margin:2.4em 0 0.85em;padding-top:1.5em;border-top:1px solid var(--line);}
+  .prose h2:first-of-type{border-top:0;padding-top:0;margin-top:1.6em;}
+  .prose h3{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.3rem;letter-spacing:-0.015em;color:var(--ink);margin:2em 0 0.6em;}
+  .prose h4{font-size:1.02rem;font-weight:700;letter-spacing:0.02em;color:var(--ink);margin:1.9em 0 0.5em;}
+
+  .prose ul,.prose ol{margin:0 0 1.35em;padding-left:1.35em;}
+  .prose li{margin-bottom:0.5em;}
+  .prose li::marker{color:var(--line-strong);}
+
+  .prose blockquote{margin:1.6em 0;padding:2px 0 2px 22px;border-left:2.5px solid var(--accent);color:var(--ink);font-family:'Fraunces',Georgia,serif;font-size:1.16rem;line-height:1.55;}
+  .prose blockquote p{margin-bottom:0.6em;}
+  .prose blockquote p:last-child{margin-bottom:0;}
+
+  .prose hr{border:0;border-top:1px solid var(--line);margin:2.6em 0;}
+  .prose code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;background:var(--paper-2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;color:var(--ink);}
+
+  /* ---- Prev / next ---- */
+  .pager{max-width:calc(var(--readw) + 52px);margin:44px auto 0;padding:22px 26px 0;border-top:1px solid var(--line);
+         display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:0.92rem;font-weight:500;}
+  .pager a{color:var(--muted);transition:color .15s;}
+  .pager a:hover{color:var(--accent);}
+  .pager .spacer{flex:1;}
+
+  /* ---- Subscribe ---- */
+  .sub{margin:44px auto 70px;max-width:var(--maxw);background:var(--ink);color:#fff;border-radius:20px;padding:44px 34px;text-align:center;position:relative;overflow:hidden;}
+  .sub::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% -30%,rgba(120,118,255,.35),transparent 62%);}
+  .sub h2{position:relative;font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-0.02em;margin:0 0 14px;}
+  .sub p{position:relative;color:#c7c6d6;margin:0 auto 24px;max-width:440px;}
+  .sub .btn{position:relative;background:#fff;color:var(--ink);}
+  .sub .btn:hover{background:#eeecff;}
+  @media(max-width:860px){ .sub{margin-left:26px;margin-right:26px;} }
+
+  footer{border-top:1px solid var(--line);padding:40px 0;background:var(--paper-2);}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:0.9rem;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+  .foot .brand{font-size:1.02rem;color:var(--ink);}
+
+  @media (max-width:560px){
+    .head{padding:44px 0 4px;}
+    .prose{font-size:1.04rem;}
+  }
+</style>
+<!-- generated by scripts/build-archive.mjs — edit issues/*.md, not this file -->
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M18 12 V82 H88" stroke="#d6cfbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 80 L84 24" stroke="#17161c" stroke-width="6" stroke-linecap="round"/><path d="M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80" stroke="#3a37d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Disequilibrium</a>
+    <a class="btn" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<main>
+  <section class="head">
+    <div class="wrap">
+      <a href="archive.html" class="back">← Back to the archive</a>
+      <h1 class="serif masthead">Disequilibrium</h1>
+      <p class="subtitle">Keeping up with AI &amp; the Entry-Level Job Market | October 20, 2026</p>
+      <hr class="rule">
+    </div>
+  </section>
+
+  <article>
+    <div class="prose">
+<h2 id="what-changed-this-week">What Changed This Week</h2>
+<p>At Anthropic, the share of technical hires who were junior fell from 27% to 9%. AI&#39;s effect on new grads is now showing up in the data, as jobs that never get posted rather than as layoffs. That difference explains why this summer&#39;s unemployment numbers looked calm. Unemployment counts people who lose work or can&#39;t find it, but it can&#39;t see a role that was never opened. The Federal Reserve&#39;s Beige Book, a survey of business contacts nationwide, found the same pattern this week. Firms in five of twelve regional districts expect less job creation after AI productivity gains, and they are shrinking through attrition and delayed hiring rather than cuts.</p>
+<p>The other half of the week&#39;s data points the opposite way. AI is creating human work, from 1,000 contractors patching code at Bank of America to doctors and lawyers paid to train models. That work mostly arrives as contracts, and it pays for expertise you can start building now. The rest of this issue follows where openings are closing, where new work is appearing, and how to tell the two apart when you job-hunt.</p>
+<h2 id="tech">Tech</h2>
+<p><strong>Anthropic, the company behind Claude, reports that the junior share of its technical hires fell from 27% to 9%.</strong> In a study published October 16, its economics team found that the junior share of technical staff dropped from 21% to 14% since early 2025, and junior postings fell sharply after December 2025. By August, AI agent hours ran about six times the hours of the employees directing them. The report concedes that its redeployment programs do nothing for people who were never hired. For CS majors, the hiring managers in the study now weight autonomy, judgment, and creative AI use above specific technical skills, so a record of independent, AI-directed projects carries more weight than coursework alone. (<a href="https://www.anthropic.com/research/employment-at-anthropic" target="_blank" rel="noopener">Anthropic</a> | <a href="https://the-decoder.com/anthropic-has-nearly-stopped-hiring-junior-staff-because-ai-agents-now-work-six-times-as-many-hours/" target="_blank" rel="noopener">The Decoder</a>)</p>
+<p><strong>Junior job postings now number about one for every four senior postings, down from one per 2.5 in 2022.</strong> Lightcast, a labor-market analytics firm, reported on October 19 that the U.S. share of postings mentioning AI skills rose 60% in the first half of 2026. That demand sits at the top of the ladder. Only 1.4% of junior postings mention AI skills, compared with 9.3% of senior ones. If you&#39;re applying to entry-level roles, the gap suggests that demonstrated AI skill is still unusual at your level, which makes it a way to stand out from applicants who simply match the listing. (<a href="https://lightcast.io/resources/blog/tracking-ai-workforce-trends-october-2026-update" target="_blank" rel="noopener">Lightcast</a>)</p>
+<h2 id="finance-consulting">Finance &amp; Consulting</h2>
+<p><strong>Bank of America hired about 1,000 contractors to fix software flaws that an AI model found.</strong> CEO Brian Moynihan told CNBC on October 14 that the bank added the contractors after Anthropic&#39;s Mythos model surfaced vulnerabilities, at a cost of &quot;a couple hundred million plus.&quot; He called the spending temporary. The same week, Bloomberg reported that doctors, lawyers, and engineers are training AI models for $80 to $450 an hour, and that Mercor, a platform that hires experts for this work, has about 30,000 active contractors. AI is creating human work, but it mostly comes as contracts. For finance and cybersecurity students, these roles can build skills quickly, so weigh them as on-ramps rather than as a substitute for a first full-time job. (<a href="https://techradar.com/pro/security/bank-of-america-had-to-hire-1-000-contractors-to-patch-software-flaws-spotted-by-anthropic-mythos" target="_blank" rel="noopener">TechRadar</a> | <a href="https://www.bloomberg.com/news/articles/2026-10-16/ai-training-jobs-are-attracting-doctors-lawyers-and-engineers" target="_blank" rel="noopener">Bloomberg</a>)</p>
+<p><strong>Accenture capped company-paid Claude use at $29 per employee per month after some staff spent up to $1,000.</strong> According to 404 Media, the consulting firm&#39;s memo sends extra usage to project budget codes and ties access to role and business need. At least one employee lost access entirely. Microsoft, Atlassian, and Uber have also moved to budget employee AI spending. For students recruiting into consulting, AI access at large firms is becoming a rationed resource, so new analysts who can show what their AI use produced for a client will likely get more of it. (<a href="https://thenextweb.com/news/accenture-claude-29-a-month-cap" target="_blank" rel="noopener">The Next Web</a> | <a href="https://cybernews.com/ai-news/accenture-ai-spending-limits/" target="_blank" rel="noopener">Cybernews</a>)</p>
+<h2 id="healthcare">Healthcare</h2>
+<p><strong>Early-career physicians submit a disproportionate share of questions to AI clinical tools, according to a study of 270 million queries.</strong> The Harvard Medical School study, published October 15 in the Journal of the American Medical Association (JAMA), tracked about 950,000 U.S. physicians, physician assistants, and nurse practitioners using OpenEvidence, an AI clinical reference tool. About 52% of queries concerned clinical decisions. Three co-authors work for OpenEvidence, and effects on patient outcomes have not been studied. For pre-med and medical students, AI-assisted reasoning is already routine among young doctors, so learning to check these tools against primary sources is now part of clinical training. (<a href="https://hms.harvard.edu/news/first-large-scale-study-shows-how-doctors-use-ai-medicine" target="_blank" rel="noopener">Harvard Medical School</a>)</p>
+<p><strong>State medical boards are writing rules for AI that performs clinical work with little or no physician supervision.</strong> STAT reported on October 14 that the Federation of State Medical Boards (FSMB) convened a 22-member workgroup that includes the American Medical Association, the American Hospital Association, Anthropic, and the insurer Elevance Health. Because states license medical practice, its guidance could become a template for state laws, and a draft could be public within weeks to months. If you&#39;re heading toward medicine, nursing, or physician assistant programs, these rules will help decide which tasks clinicians are hired to do, so track them alongside residency and job data. (<a href="https://www.statnews.com/2026/10/14/lobbyists-trade-groups-ama-push-autonomous-clinical-ai-regulations/" target="_blank" rel="noopener">STAT</a>)</p>
+    </div>
+    <nav class="pager">
+      <a href="issue-2026-10-13.html">← October 13, 2026</a>
+      <span class="spacer"></span>
+    </nav>
+  </article>
+
+  <section>
+    <div class="sub">
+      <h2 class="serif">Don't miss the next one.</h2>
+      <p>Get Disequilibrium in your inbox every week — free.</p>
+      <a class="btn" href="index.html#subscribe">Subscribe — it's free</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:10px;"><svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true" style="width:20px;height:20px;flex:0 0 20px;"><path d="M18 12 V82 H88" stroke="#d6cfbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 80 L84 24" stroke="#17161c" stroke-width="6" stroke-linecap="round"/><path d="M22 25 C34 6 39 44 47 39 C55 34 57 66 64 59 C71 52 73 80 84 80" stroke="#3a37d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>Disequilibrium</a>
+    <div>© 2026 Disequilibrium · A weekly newsletter on AI &amp; the early-career landscape</div>
+  </div>
+</footer>
+
+<script>
+  /* Copying an issue into an email dragged the page's beige background along with
+     it, because the browser serializes the surrounding computed styles into the
+     clipboard. Here we put the selection on the clipboard ourselves as plain
+     semantic HTML — <strong>, <em>, <a>, <h2> all survive, no colours, no
+     background — so it arrives styled by the mail client instead. */
+  document.addEventListener('copy', function (e) {
+    var sel = document.getSelection();
+    if (!sel || sel.isCollapsed || !e.clipboardData) return;
+
+    var holder = document.createElement('div');
+    for (var i = 0; i < sel.rangeCount; i++) {
+      holder.appendChild(sel.getRangeAt(i).cloneContents());
+    }
+
+    holder.querySelectorAll('*').forEach(function (el) {
+      el.removeAttribute('style');
+      el.removeAttribute('class');
+      el.removeAttribute('id');
+    });
+
+    try {
+      e.clipboardData.setData('text/html', holder.innerHTML);
+      e.clipboardData.setData('text/plain', sel.toString());
+      e.preventDefault();
+    } catch (err) {
+      /* Any failure just falls through to the browser's own copy. */
+    }
+  });
+</script>
+
+</body>
+</html>
